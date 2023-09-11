@@ -72,14 +72,12 @@ class Parser:
             json.dump(self.list_of_items, file, indent=4, ensure_ascii=False)
 
 
-start = time.perf_counter()
 if __name__ == '__main__':
     obj = Parser('Nike Air Force 1', 'murmansk')
-    obj.filter('4000', '12000')
+    obj.filter(n, m)
     try:
         obj.parser()
     except Exception as err:
         print(err)
     obj.create_json_file('test')
-    print(time.perf_counter() - start)
     print('Finished')
